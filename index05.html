@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java 05</title>
+</head>
+<body>
+    <h1>Utilizando funções</h1>
+    <p>Digite a sua idade:</p>
+    <input type="text" id="txtidade" name="idade">
+    <input type="button" value="Verificar" id="btVerifica" name="Verificar"
+    onclick="idade('txtidade')">
+    <label for="" id="resultado"></label>
+
+    <script>
+        function idade(num) {
+            let x = parseInt(document.getElementById(num).value);
+            console.log(x);
+            console.log(typeof x);
+
+            if (isNaN(x) || x < 0){
+                document.getElementById('resultado').innerText= "Por favor, digite uma idade válida!";
+                return;
+            }
+
+            /*
+            if (x >= 18) {
+                document.getElementById('resultado').innerText="Você é maior de idade!";
+            }
+            else{
+                document.getElementById('resultado').innerText="Você é menor de idade!";
+            }
+            */
+
+            document.getElementById('resultado').innerText = (x >= 18 ? 'Você é mair de idade!' : 'Você é menor de idade');
+            
+        }
+
+    </script>
+
+</body>
+</html>

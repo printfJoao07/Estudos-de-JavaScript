@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #cecece;
+    padding: 40px;
+}
+
+body p#data{
+    font-size: 1.2rem;
+    color: red;
+}
+
+body p#frase{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #222;
+}
