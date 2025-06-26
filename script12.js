@@ -5,9 +5,9 @@ const resultados = document.getElementById('resultados');
 let frutas = ['Maçã', 'Banana', 'Laranja', 'Morango'];
 
 function exibirResultados(mensagem){
+    // a função map pega cada posição do array, chama de fruta e adiciona ela entre as tags li
     arrayAtual.innerHTML = `Array: 
     <ul>
-        // a função map pega cada posição do array, chama de fruta e adiciona ela entre as tags li
         ${frutas.map(fruta => `<li>${fruta}</li>`).join('')}
     </ul>`;
 
