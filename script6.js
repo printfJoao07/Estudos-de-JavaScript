@@ -14,6 +14,7 @@ function mostrarFraseDoDia(){
     const hoje = new Date();
     console.log(hoje);
 
+    // Formatar data conforme o local setado e apresentando apenas o que deseja
     const dataFormatada = hoje.toLocaleDateString('pt-BR', {
         weekday: 'long', /* short */ 
         year: 'numeric', /* 2-digit */ 
@@ -25,10 +26,16 @@ function mostrarFraseDoDia(){
 
     document.getElementById('data').innerText = `Hoje é:  ${dataFormatada}`;
 
+    /*
+    Math.floor() vai arredondar para baixo o número resultante da conta
+    frases.length pega o tamanho do array
+    Math.random() sorteia um número aleatório de 0 a 1, incluindo as casas decimais
+    */
     const indice = Math.floor(frases.length * Math.random());
 
     document.getElementById('frase').innerText = frases[indice];
 
 };
 
+// Quando a página for carregada a função será executada
 window.onload = mostrarFraseDoDia();
